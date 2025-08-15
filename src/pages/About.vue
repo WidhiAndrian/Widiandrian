@@ -18,12 +18,12 @@
 
 <script setup>
 const skills = [
-  { name: 'Vue 3 / Nuxt', level: 85 },
-  { name: 'TypeScript', level: 80 },
-  { name: 'Node.js', level: 75 },
-  { name: 'Tailwind CSS', level: 90 },
-  { name: 'Python (AI/ML)', level: 70 },
-  { name: 'Audio DSP', level: 65 },
+  { name: 'Vue 3 / Nuxt', level: 20 },
+  { name: 'TypeScript', level: 20 },
+  { name: 'Node.js', level: 20 },
+  { name: 'Tailwind CSS', level: 0 },
+  { name: 'Python (AI/ML)', level: 10 },
+  { name: 'Fl studio (DAW)', level: 85 },
 ]
 </script>
 
