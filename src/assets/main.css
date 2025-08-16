@@ -1,41 +1,53 @@
+/* Import base reset kustom kalau ada */
 @import './base.css';
 
-/* Jangan batasi/pecah layout di #app */
-html, body, #app {
-  height: 100%;
-  margin: 0;
+/* Aktifkan Tailwind v4 */
+@import "tailwindcss";
+
+/* ---- Base global tambahan ---- */
+@layer components {
+  .nav-link.active .label { @apply text-sky-400; }
 }
 
-#app {
-  max-width: none;
-  margin: 0 auto;
-  padding: 0rem;
-  font-weight: normal;
-}
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --nav-h: 56px; /* tinggi navbar, dipakai di App.vue */
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 0px;
-}
-
-/* Hapus efek background hijau global */
-@media (hover: hover) {
-  a:hover {
-    background-color: transparent; /* diubah dari hsla(...) */
   }
-}
 
-/* Matikan aturan desktop bawaan template */
-@media (min-width: 1024px) {
-  body {
-    display: block;
-    place-items: initial;
+  /* Box-sizing supaya konsisten */
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
-  #app {
-    display: block;
+
+  html, body, #app {
+    height: 100%;
+    margin: 0;
     padding: 0;
+    font-weight: normal;
+  }
+
+  a, .green {
+    @apply text-emerald-600 no-underline transition duration-400;
+    padding: 0;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      background-color: transparent; /* hapus bg hijau default */
+    }
+  }
+
+  /* Matikan aturan desktop bawaan template lama */
+  @media (min-width: 1024px) {
+    body {
+      display: block;
+      place-items: initial;
+    }
+    #app {
+      display: block;
+      padding: 0;
+    }
   }
 }

@@ -1,5 +1,7 @@
 <template>
-  <footer class="foot">
+  <footer
+      class="shrink-0 w-full text-center p-4 border-t border-black/10 dark:border-white/20 opacity-70"
+  >
     © {{ year }} — {{ name }} · Vue 3
   </footer>
 </template>
@@ -10,14 +12,3 @@ defineProps({
 })
 const year = new Date().getFullYear()
 </script>
-
-<style scoped>
-.foot {
-  flex-shrink: 0; /* Biar footer tidak ketarik ke atas */
-  width: 100%;
-  text-align: center;
-  padding: 16px;
-  border-top: 1px solid color-mix(in oklab, CanvasText 15%, transparent);
-  opacity: 0.7;
-}
-</style>
