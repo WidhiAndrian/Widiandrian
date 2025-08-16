@@ -20,11 +20,15 @@
         <RouterLink :to="{ name: 'projects' }">Lihat</RouterLink>
       </li>
     </ul>
+
+    //musik play
+    <wave-list />
   </section>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import WaveList from "@/components/WaveList.vue";
 
 const projects = [
   { title: 'Drum Stem Separator', desc: 'Model pemisah stem (kick/snare/hat).' },
@@ -75,6 +79,7 @@ function loop() {
 
 onMounted(() => { loop() })
 onBeforeUnmount(() => clearTimeout(timer))
+
 </script>
 
 <style scoped>
@@ -127,3 +132,4 @@ onBeforeUnmount(() => clearTimeout(timer))
   padding: 12px;
 }
 </style>
+
