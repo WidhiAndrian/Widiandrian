@@ -37,7 +37,7 @@ const projects = [
 ]
 
 // ===== Typewriter =====
-const words = ['Flower', 'Bunga', 'Yayaa']
+const words = ['Flower', 'Bunga', '///////']
 const displayText = ref('')
 
 const typingSpeed = 85      // ms per huruf saat mengetik
